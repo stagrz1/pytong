@@ -13,11 +13,16 @@ wybor_gracza = input("Twoj wybor, (wpisz numer)")
 
 if wybor_gracza not in ["1", "2", "3"]:
     print("postaraj sie wybrac opcje pod numerem 1, 2 lub 3")
-   
+  
 
 wybor_gracza = int(wybor_gracza)
 
 mapa_wyborow = {1: "Papier", 2: "Kamien", 3: "Nozyce" }
 
 
-print("twoj wybor")
+print("twoj wybor" + mapa_wyborow[wybor_gracza])
+
+
+
+wybor_komputera = random.randint(1,3)
+print("wybor komputera" + mapa_wyborow[wybor_komputera])
