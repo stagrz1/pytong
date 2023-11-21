@@ -2,22 +2,33 @@ import random
 
 print("Hej, zagrajmy w wisielca!")
 lista=("szkola", "krzeslo", "Szczebrzeszyna", "Pomorze", "Kamienie")
-
-wyraz=str(lista[random.randint(0, len(list) - 1)])
-tablica= list(wyraz)
-
-for i in range(len(wyraz)):
-    tablica[i]= "_"
+wyraz= random.choice(lista)
+tablica= list("_"* len (wyraz))
 
 zycia=7
+
 while zycia>0:
     print("pozostalo Ci ", zycia, "zyc")
     print("--------------")
     print("--------------")
-    print(" ",(tablica))
+    print(" ".join(tablica))
     print("--------------")
-    print("--------------")
+    print("--------------") 
+
+    litera=input("podaj litere")
+
+if litera in wyraz:
+     for i in range(len(wyraz)):
+         if wyraz[i] == litera:
+             tablica[i] = litera
+
+if "".join(tablica) == wyraz:
+    print("pozostalo Ci ", zycia, "zyc")
+    print("")
+    print(" ".join(tablica))
+    print("")
+    print("wygrales!!")    
+    break
 
 
-    print("podaj litere")
-    litera=input()
+else: zycia -=(-1)
