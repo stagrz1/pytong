@@ -28,7 +28,7 @@ if "".join(tablica) == wyraz:
     print(" ".join(tablica))
     print("")
     print("wygrales!!")    
-    break
+    
 
 
 else: zycia -=(-1)
