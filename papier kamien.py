@@ -7,6 +7,8 @@ def gra_papier_kamien_nozyce():
     print(" 2. Kamień")
     print(" 3. Nozyce")
 
+gra_papier_kamien_nozyce()
+
 wybor_gracza = input("Twoj wybor, (wpisz numer)")
 
 
@@ -26,3 +28,13 @@ print("twoj wybor" + mapa_wyborow[wybor_gracza])
 
 wybor_komputera = random.randint(1,3)
 print("wybor komputera" + mapa_wyborow[wybor_komputera])
+
+if wybor_gracza == wybor_komputera:
+    print("Mamy remis!!")
+
+elif(wybor_gracza == 1 and wybor_komputera == 3) or \
+    (wybor_gracza == 2 and wybor_komputera == 1) or \
+    (wybor_gracza == 3 and wybor_komputera == 2):
+    print("Wygrałeś!!")
+else:
+    print("Przegrałeś! , spróbuj ponownie")
