@@ -6,9 +6,17 @@ zwyciezca= None
 uruchomionaGra=True
 
 
-def printBoard(board):
+def printBoard():
     print(board[0]+ " | " + board[1] + " | " +board[2])
     print(board[4]+ " | " + board[5] + " | " +board[6])
     print(board[7]+ " | " + board[8] + " | " +board[9])
+    print(printBoard)
     
-     
+
+def playerInput(board):
+    inp = input("wybierz numer od 1 do 9")
+    if inp >= 1 and inp <= 9 and board[inp-1] == "-":
+        board[inp-1] = gracz
+    else:
+        print("to pole jest juz zajete")
+
