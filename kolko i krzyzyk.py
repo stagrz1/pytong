@@ -88,6 +88,7 @@ def komputer(board):
 
 
 
+
 while Gamerunning:
     printBoard(board) 
     playerInput(board) 
