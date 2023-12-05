@@ -1,3 +1,7 @@
+import random
+
+
+
 board=  ["-","-","-",
            "-","-","-",
            "-","-","-",]
@@ -14,7 +18,7 @@ def printBoard(board):
     
 
 def playerInput(board):
-    inp = input("wybierz numer od 1 do 9")
+    inp = int(input("wybierz numer od 1 do 9"))
     if inp >= 1 and inp <= 9 and board[inp-1] == "-":
         board[inp-1] = gracz
     else:
@@ -54,11 +58,42 @@ def trojka_pionowo(board):
         winner = board[2]
         return True    
 
+def remis():
+    global Gamerunning
+    if "-" not in board:
+        printBoard(board)
+        print("mamy remis!")
+        Gamerunning=False
+
+def wygrana():
+    if trojka_poziomo or trojka_pionowo or trojka_po_skosie:
+        print(f"wygrywa {zwyciezca}")
 
 
+       
+def zmiana_gracza():
+    global gracz
+    if gracz == "X":
+        gracz = "O"
+    else:
+        gracz = "X"
+
+
+def komputer(board):
+    while gracz == "O":
+        pozycja = random. randint(0,8)
+        if board[pozycja] =="-":
+            board[pozycja] = "O"
+            zmiana_gracza()
 
 
 
 while Gamerunning:
     printBoard(board) 
-    playerInput(board)
+    playerInput(board) 
+    wygrana()
+    remis()
+    zmiana_gracza()
+    komputer(board)
+    wygrana()
+    remis()
