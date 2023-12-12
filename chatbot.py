@@ -2,7 +2,10 @@ import random
 
 
 def chatbot():
-     responses = {
+     
+     def get_response(user_input):
+     
+      responses = {
         "Jak się masz?": ["Dobrze, dziękuję!", "Nieźle, a u Ciebie?", "Mam się świetnie!"],
         "Co u Ciebie słychać?": ["Wszystko w porządku.", "Trochę zmęczony, ale ogólnie dobrze.", "Mam się świetnie!"],
         "Jaka jest pogoda?": ["Pogoda jest piękna!", "Deszczowo niestety.", "Chmury, ale bez deszczu."],
