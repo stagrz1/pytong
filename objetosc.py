@@ -24,7 +24,7 @@ while True:
     print("4. Walec")    
     
 
-    wybor_uzytkownika=input("wybierz numer od 1-5")
+    wybor_uzytkownika=input("wybierz numer od 1-4")
 
     if wybor_uzytkownika == '1':
             a = float(input("Podaj długość boku szescianu: "))
