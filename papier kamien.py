@@ -32,9 +32,9 @@ print("wybor komputera" + mapa_wyborow[wybor_komputera])
 if wybor_gracza == wybor_komputera:
     print("Mamy remis!!")
 
-elif(wybor_gracza == 1 and wybor_komputera == 3) or \
-    (wybor_gracza == 2 and wybor_komputera == 1) or \
-    (wybor_gracza == 3 and wybor_komputera == 2):
+elif(wybor_gracza == 3 and wybor_komputera == 1) or \
+    (wybor_gracza == 1 and wybor_komputera == 2) or \
+    (wybor_gracza == 2 and wybor_komputera == 3):
     print("Wygrałeś!!")
 else:
     print("Przegrałeś! , spróbuj ponownie")
